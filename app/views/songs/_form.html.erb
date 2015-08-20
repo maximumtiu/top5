@@ -22,6 +22,7 @@
   <div class="field form-group">
     <%= f.select(:artist_id, @artists.collect {|a| [ a.name, a.id ] }, {:include_blank => 'Please select an artist'}) %>
   </div>
+  
   <div class="actions form-group">
     <%= f.submit "Submit", class: "btn btn-default btn-sm" %>
   </div>

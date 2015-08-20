@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% if @artist.avatar.url != nil %>
+	<%= image_tag @artist.avatar.url(:thumb), class: "circle-img" %>
+<% end %>
+
 <h1>
   <%= @artist.name %>
 </h1>

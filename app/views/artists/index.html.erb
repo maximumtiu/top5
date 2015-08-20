@@ -10,6 +10,9 @@
     <% @artists.each do |artist| %>
     <div class="col-sm-6">
       <div class="well">
+        <% if artist.avatar_file_name != nil %>
+          <%= image_tag artist.avatar.url(:thumb), class: "circle-img" %>
+        <% end %>
         <h2><%= link_to artist.name, artist %></h2>
         <% artist.rating.times do %>
             <span class="glyphicon glyphicon-star"></span>
